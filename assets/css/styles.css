@@ -125,10 +125,6 @@ a:hover {
     color: #FFDD50
 }
 
-a2:hover {
-    color: #ffffff
-}
-
 
 img,
 svg {
@@ -8185,7 +8181,7 @@ fieldset:disabled .btn {
 
 .p-6 {
     padding-top: 2rem;
-    padding-left: 2.8rem;
+    padding-left: 2.2rem;
 }
 
 .p-4 {
@@ -12160,6 +12156,9 @@ a {
     text-decoration: none
 }
 
+a3 {
+    font-weight: 300;
+}
 
 a2 {
     color: #FFDD50;
@@ -12633,6 +12632,12 @@ a2 {
 .app-card {
     position: relative;
     background: #22242F;
+    border-radius: 1rem
+}
+
+.app-cardNoticeShortcut {
+    position: relative;
+    background: #333647;
     border-radius: 1rem
 }
 
@@ -13171,7 +13176,7 @@ th {
 }
 
 .app-card-notification .notification-title {
-    font-size: 1.125rem
+    font-size: 1.4rem
 }
 
 .app-card-notification .notification-content {
