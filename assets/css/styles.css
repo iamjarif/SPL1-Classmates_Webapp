@@ -9423,7 +9423,7 @@ fieldset:disabled .btn {
     .d-md-block {
         display: block !important
     }
-
+d-flex 
     .d-md-grid {
         display: grid !important
     }
@@ -13234,7 +13234,7 @@ th {
     width: 360px
 }
 
-.app-auth-wrapper .app-logo .logo-icon {
+.app-logo .logo-icon {
     width: 60px;
     height: 60px
 }
@@ -13319,6 +13319,36 @@ th {
     margin-right: auto;
     width: 50%;
 }
+
+    #message {
+    display:none;
+    background: transparent;
+    position: center;
+   }
+   
+   #message p {
+    font-size: 15px;
+   } 
+  
+   .valid {
+    color: rgb(0, 193, 0);
+   }
+  
+    .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+   }
+
+   .invalid {
+    color: red;
+   }
+  
+   .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+   }
 
 
 
