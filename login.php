@@ -15,12 +15,14 @@ if(isset($_POST['login']))
     if($checkUser==1)
    {
     $_SESSION['SId']=$LSId;
-    echo"Log in successful";
+    echo"<script>alert('Log in was successful.')</script>";
+    echo"<script> window.location.href ='index.html'</script>";
     
    }
    else
    {
     echo"<script>alert('Incorrect details, try again')</script>";
+    echo"<script> window.location.href ='login.html'</script>";
    }
 
 }
