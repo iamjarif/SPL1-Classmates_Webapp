@@ -234,13 +234,77 @@
                                                     <th class="cell">Year</th>
                                                     <th class="cell">Course Name</th>
                                                     <th class="cell">Exam Name</th>
-                                                    <th class="cell">Upload Date</th>
+                                                 
                                                     <th class="cell">Uploaded by</th>
                                                     <th class="cell">View</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
+
+                                            <tr>
+                                            <?php
+                                                 include("connection.php");
+                                                 $queslistquery="select * from questionbank order by quesuploadtime desc";
+                                                 $quesdata=mysqli_query($conn,$queslistquery);
+                                                 $totalrows=mysqli_num_rows($quesdata);
+
+                                                
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($quesdata))
+                                                    {
+
+
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+
+                                                        echo"<td>";
+                                                        echo $result['year'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['ExamName'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
+
+                                                
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['qlink'];
+                                                      echo">";
+                                                      echo "Open</a>";
+                                                      echo'</td>';
+
+                                           
+
+
+                                                       echo"</tr>";
+
+                                                         
+                                                        
+                                                    }
+                                                 } 
+
+
+
+                                                ?>
+
+                                            
+
                                                 <tr>
                                                     <td class="cell">2019-2020</td>
                                                     <td class="cell">CSE4307</td>

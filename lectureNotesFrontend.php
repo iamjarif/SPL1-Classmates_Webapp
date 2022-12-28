@@ -243,14 +243,75 @@
                                                 <tr>
                                                     <th class="cell">Course Name</th>
                                                     <th class="cell">Topic Name</th>
-                                                    <th class="cell">Upload Date</th>
+                                                    <th class="cell">Semester</th>
                                                     <th class="cell">Uploaded by</th>
                                                     <th class="cell">View</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
+
+                                            <tr>
+                                            <?php
+                                                 include("connection.php");
+                                                 $leclistquery="select * from lecture_notes order by lecuploadtime desc";
+                                                 $lecdata=mysqli_query($conn,$leclistquery);
+                                                 $totalrows=mysqli_num_rows($lecdata);
+
+                                                
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($lecdata))
+                                                    {
+
+
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['tname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['sem'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
+
+                                                
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['leclink'];
+                                                      echo">";
+                                                      echo "Open</a>";
+                                                      echo'</td>';
+
+                                           
+
+
+                                                       echo"</tr>";
+
+                                                         
+                                                        
+                                                    }
+                                                 } 
+
+
+
+                                                ?>
+                                                
                                                     <td class="cell">CSE4307</td>
                                                     <td class="cell">Database Diagram drawing</td>
                                                     <td class="cell"><span>17 Oct</span><span class="note">2:16

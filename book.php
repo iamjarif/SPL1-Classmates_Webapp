@@ -10,7 +10,8 @@ if(isset($_POST['bookupload']))
   $sem=mysqli_real_escape_string($conn,$_POST['sem']);
   $bname=mysqli_real_escape_string($conn,$_POST['bname']);
   $bookurl=mysqli_real_escape_string($conn,$_POST['bookurl']);
-  $urlupload="INSERT INTO `books` (`cname`,`bname`,`sem`, `bookurl`, `SId`) VALUES ('$cname','$bname','$sem', '$bookurl', '$uploadersid')";
+  $uploadtime=date("y-m-d h:i:sa");
+  $urlupload="INSERT INTO `books` (`cname`,`bname`,`sem`, `bookurl`, `SId`,`uploadtime`) VALUES ('$cname','$bname','$sem', '$bookurl', '$uploadersid','$uploadtime')";
   $questionuploadquery=mysqli_query($conn,$urlupload);
   if($urlupload)
   {

@@ -11,8 +11,9 @@ if(isset($_POST['notesupload']))
   $tname=mysqli_real_escape_string($conn,$_POST['tname']);
   $sem=mysqli_real_escape_string($conn,$_POST['sem']);
   $notesurl=mysqli_real_escape_string($conn,$_POST['leclink']);
+  $lecuploadtime=date("y-m-d h:i:sa");
   
-    $urlupload="INSERT INTO `lecture_notes` (`cname`,`tname`,`sem`, `leclink`, `SId`) VALUES ('$cname','$tname','$sem', '$notesurl', '$uploadersid')";
+    $urlupload="INSERT INTO `lecture_notes` (`cname`,`tname`,`sem`, `leclink`, `SId`,`lecuploadtime`) VALUES ('$cname','$tname','$sem', '$notesurl', '$uploadersid','$lecuploadtime')";
     $notesquery=mysqli_query($conn,$urlupload);
     if($urlupload)
     {

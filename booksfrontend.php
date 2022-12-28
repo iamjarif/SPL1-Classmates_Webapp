@@ -370,7 +370,7 @@
 
                                                 <?php
                                                  include("connection.php");
-                                                 $booklistquery="select * from books";
+                                                 $booklistquery="select * from books order by uploadtime desc";
                                                  $bookdata=mysqli_query($conn,$booklistquery);
                                                  $totalrows=mysqli_num_rows($bookdata);
 
