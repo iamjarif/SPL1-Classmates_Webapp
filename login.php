@@ -23,7 +23,7 @@ if(isset($_POST['login']))
     $_SESSION['Name']=$Name;
     $_SESSION['success'] = "You are now logged in";
     echo"<script>alert('Log in was successful.')</script>";
-    echo"<script> window.location.href ='index.html'</script>";
+    echo"<script> window.location.href ='index.php'</script>";
     }
     else
     {

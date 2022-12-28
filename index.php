@@ -69,7 +69,7 @@
         <div class="sidepanel-inner d-flex flex-column">
           <!--//Logo-->
           <div class="app-branding">
-            <a class="app-logo" href="index.html"
+            <a class="app-logo" href="index.php"
               ><img
                 class="logo-icon me-2"
                 src="assets/images/app-logo.svg"
@@ -82,7 +82,7 @@
           <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
             <ul class="app-menu list-unstyled accordion" id="menu-accordion">
               <li class="nav-item">
-                <a class="nav-link active" href="index.html">
+                <a class="nav-link active" href="index.php">
                   <span class="nav-icon">
                     <svg
                       width="24"
