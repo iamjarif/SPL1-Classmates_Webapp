@@ -313,6 +313,7 @@
           {
             while($result=mysqli_fetch_assoc($noticedata))
             {
+              $notice_no=$result['nid'];
               echo' <div class="app-card app-card-notification shadow-sm mb-8">
               <div class="app-card-header px-4 py-3">
                 <div class="row g-3 align-items-center">
@@ -332,6 +333,27 @@
               echo'<div class="notification-content">';
               echo $result['ndescription'];
               echo'</div>';
+              
+
+              echo'<div class="notification-content">';
+              echo'<a class="btn-sm app-btn-extra"';
+              echo" href=";
+              echo'"';
+              echo "displayNoticeFile.php?display_id=";
+              echo"$notice_no";
+              echo'"';
+
+              echo">";
+              echo"Download Notice";
+              echo "</a>";
+                                                    
+              echo'</td>';
+              echo'</div>';                                      
+
+                      
+             
+                                                      
+              
             }
           }
 
