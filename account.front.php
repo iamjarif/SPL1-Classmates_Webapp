@@ -27,113 +27,7 @@ include("login.php");
 
 						<div class="app-utilities col-auto">
 
-							<!--//Notification-->
-							<div class="app-utility-item app-notifications-dropdown dropdown">
-
-								<!--//Notification Icon-->
-								<a class="dropdown-toggle no-toggle-arrow" id="notifications-dropdown-toggle"
-									data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false"
-									title="Notifications">
-									<svg width="26" height="26" viewBox="0 0 24 24" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M19.3419 14.49L18.3419 12.83C18.1319 12.46 17.9419 11.76 17.9419 11.35V8.82C17.9419 6.47 16.5619 4.44 14.5719 3.49C14.0519 2.57 13.0919 2 11.9919 2C10.9019 2 9.9219 2.59 9.4019 3.52C7.4519 4.49 6.1019 6.5 6.1019 8.82V11.35C6.1019 11.76 5.9119 12.46 5.7019 12.82L4.6919 14.49C4.2919 15.16 4.2019 15.9 4.4519 16.58C4.6919 17.25 5.2619 17.77 6.0019 18.02C7.9419 18.68 9.9819 19 12.0219 19C14.0619 19 16.1019 18.68 18.0419 18.03C18.7419 17.8 19.2819 17.27 19.5419 16.58C19.8019 15.89 19.7319 15.13 19.3419 14.49Z"
-											fill="white" />
-										<path
-											d="M14.8297 20.01C14.4097 21.17 13.2997 22 11.9997 22C11.2097 22 10.4297 21.68 9.87969 21.11C9.55969 20.81 9.31969 20.41 9.17969 20C9.30969 20.02 9.43969 20.03 9.57969 20.05C9.80969 20.08 10.0497 20.11 10.2897 20.13C10.8597 20.18 11.4397 20.21 12.0197 20.21C12.5897 20.21 13.1597 20.18 13.7197 20.13C13.9297 20.11 14.1397 20.1 14.3397 20.07C14.4997 20.05 14.6597 20.03 14.8297 20.01Z"
-											fill="white" />
-									</svg>
-
-
-									<span class="icon-badge">2</span>
-								</a>
-
-								<!--//Notification drop down Contents-->
-								<div class="dropdown-menu p-0" aria-labelledby="notifications-dropdown-toggle">
-
-									<!--//dropdown-menu-Title-->
-									<div class="dropdown-menu-header p-3">
-										<h5 class="dropdown-menu-title mb-0">Notifications</h5>
-									</div>
-
-									<!--//dropdown-menu-Content-->
-									<div class="dropdown-menu-content">
-
-										<!--//Item-2-->
-										<div class="item p-3">
-											<div class="row gx-2 justify-content-between align-items-center">
-
-												<!--//Item-2 Icon-->
-												<div class="col-auto">
-													<div class="app-icon-holder icon-holder-mono">
-														<svg width="1em" height="1em" viewBox="0 0 16 16"
-															class="bi bi-bar-chart-line" fill="currentColor"
-															xmlns="http://www.w3.org/2000/svg">
-															<path fill-rule="evenodd"
-																d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
-														</svg>
-													</div>
-												</div>
-
-												<!--//Item-2 Text-->
-												<div class="col">
-													<div class="info">
-														<div class="desc">Your report is ready. Proin venenatis interdum
-															est.</div>
-														<div class="meta"> 3 days ago</div>
-													</div>
-												</div>
-
-											</div>
-
-											<!--//Item-2 Redirect to Notification-->
-											<a class="link-mask" href="notifications.html"></a>
-										</div>
-
-										<!--//Item-3-->
-										<div class="item p-3">
-											<div class="row gx-2 justify-content-between align-items-center">
-
-												<!--//Item-3 Icon-->
-												<div class="col-auto">
-													<div class="app-icon-holder icon-holder-mono">
-														<svg width="1em" height="1em" viewBox="0 0 16 16"
-															class="bi bi-bar-chart-line" fill="currentColor"
-															xmlns="http://www.w3.org/2000/svg">
-															<path fill-rule="evenodd"
-																d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2zm1 12h2V2h-2v12zm-3 0V7H7v7h2zm-5 0v-3H2v3h2z" />
-														</svg>
-													</div>
-												</div>
-
-												<!--//Item-3 Text-->
-												<div class="col">
-													<div class="info">
-														<div class="desc">Your report is ready. Proin venenatis interdum
-															est.</div>
-														<div class="meta"> 3 days ago</div>
-													</div>
-												</div>
-
-											</div>
-
-											<!--//Item-3 Redirect to Notification-->
-											<a class="link-mask" href="notifications.html"></a>
-										</div>
-
-									</div>
-									<!--//dropdown-menu-content-->
-
-									<!--//View All Button-->
-									<div class="dropdown-menu-footer p-2 text-center">
-										<a href="notifications.html">View all</a>
-									</div>
-
-								</div>
-								<!--//Notification Contents-->
-
-							</div>
-							<!--//Notification-->
+							
 
 							<!--//User-->
 							<div class="app-utility-item app-user-dropdown dropdown">
@@ -142,7 +36,7 @@ include("login.php");
 										alt="user profile"></a>
 								<ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
 									<li><a class="dropdown-item" href="account.html">Account</a></li>
-									<li><a class="dropdown-item" href="settings.html">Settings</a></li>
+									
 									<li>
 										<hr class="dropdown-divider">
 									</li>
@@ -242,24 +136,19 @@ include("login.php");
 
 						<li class="nav-item">
 
-							<a class="nav-link" href="notifications.html">
-								<span class="nav-icon">
-									<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<path
-											d="M19.3419 14.49L18.3419 12.83C18.1319 12.46 17.9419 11.76 17.9419 11.35V8.82C17.9419 6.47 16.5619 4.44 14.5719 3.49C14.0519 2.57 13.0919 2 11.9919 2C10.9019 2 9.9219 2.59 9.4019 3.52C7.4519 4.49 6.1019 6.5 6.1019 8.82V11.35C6.1019 11.76 5.9119 12.46 5.7019 12.82L4.6919 14.49C4.2919 15.16 4.2019 15.9 4.4519 16.58C4.6919 17.25 5.2619 17.77 6.0019 18.02C7.9419 18.68 9.9819 19 12.0219 19C14.0619 19 16.1019 18.68 18.0419 18.03C18.7419 17.8 19.2819 17.27 19.5419 16.58C19.8019 15.89 19.7319 15.13 19.3419 14.49Z"
-											fill="#86C0A1" />
-										<path
-											d="M14.8297 20.01C14.4097 21.17 13.2997 22 11.9997 22C11.2097 22 10.4297 21.68 9.87969 21.11C9.55969 20.81 9.31969 20.41 9.17969 20C9.30969 20.02 9.43969 20.03 9.57969 20.05C9.80969 20.08 10.0497 20.11 10.2897 20.13C10.8597 20.18 11.4397 20.21 12.0197 20.21C12.5897 20.21 13.1597 20.18 13.7197 20.13C13.9297 20.11 14.1397 20.1 14.3397 20.07C14.4997 20.05 14.6597 20.03 14.8297 20.01Z"
-											fill="#86C0A1" />
-									</svg>
-
-								</span>
-								<span class="nav-link-text">Notification</span>
-							</a>
-
-						</li>
-						<!--//Item-Notification-->
+                <a class="nav-link" href="chat.html">
+                  <span class="nav-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                          <path d="M18.4699 16.83L18.8599 19.99C18.9599 20.82 18.0699 21.4 17.3599 20.97L13.8999 18.91C13.6599 18.77 13.5999 18.47 13.7299 18.23C14.2299 17.31 14.4999 16.27 14.4999 15.23C14.4999 11.57 11.3599 8.59 7.49989 8.59C6.70989 8.59 5.93989 8.71 5.21989 8.95C4.84989 9.07 4.48989 8.73 4.57989 8.35C5.48989 4.71 8.98989 2 13.1699 2C18.0499 2 21.9999 5.69 21.9999 10.24C21.9999 12.94 20.6099 15.33 18.4699 16.83Z" fill="#3BB0C1"/>
+                                          <path d="M13 15.2301C13 16.4201 12.56 17.5201 11.82 18.3901C10.83 19.5901 9.26 20.3601 7.5 20.3601L4.89 21.9101C4.45 22.1801 3.89 21.8101 3.95 21.3001L4.2 19.3301C2.86 18.4001 2 16.9101 2 15.2301C2 13.4701 2.94 11.9201 4.38 11.0001C5.27 10.4201 6.34 10.0901 7.5 10.0901C10.54 10.0901 13 12.3901 13 15.2301Z" fill="#3BB0C1"/>
+                                      </svg>
+                      
+                  </span>
+                  <span class="nav-link-text">Group Discussion</span>
+                </a>
+  
+              </li>
+              <!--//Item-Apps-->
 
 					</ul>
 					<!--//app-menu-->
@@ -271,23 +160,21 @@ include("login.php");
 					<nav class="app-nav app-nav-footer">
 						<ul class="app-menu footer-menu list-unstyled">
 
-							<li class="nav-item">
+						<li class="nav-item">
 
-								<a class="nav-link" href="settings.html">
-									<span class="nav-icon">
-										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-											xmlns="http://www.w3.org/2000/svg">
-											<path
-												d="M18.9381 5.41994L13.7681 2.42994C12.7781 1.85994 11.2281 1.85994 10.2381 2.42994L5.01813 5.43994C2.94813 6.83994 2.82812 7.04994 2.82812 9.27994V14.7099C2.82812 16.9399 2.94813 17.1599 5.05813 18.5799L10.2281 21.5699C10.7281 21.8599 11.3681 21.9999 11.9981 21.9999C12.6281 21.9999 13.2681 21.8599 13.7581 21.5699L18.9781 18.5599C21.0481 17.1599 21.1681 16.9499 21.1681 14.7199V9.27994C21.1681 7.04994 21.0481 6.83994 18.9381 5.41994ZM11.9981 15.2499C10.2081 15.2499 8.74813 13.7899 8.74813 11.9999C8.74813 10.2099 10.2081 8.74994 11.9981 8.74994C13.7881 8.74994 15.2481 10.2099 15.2481 11.9999C15.2481 13.7899 13.7881 15.2499 11.9981 15.2499Z"
-												fill="#5A6DED" />
-										</svg>
+<a class="nav-link active" href="account.html">
+	<span class="nav-icon">
+		<svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path d="M22 12C22 6.49 17.51 2 12 2C6.49 2 2 6.49 2 12C2 14.9 3.25 17.51 5.23 19.34C5.23 19.35 5.23 19.35 5.22 19.36C5.32 19.46 5.44 19.54 5.54 19.63C5.6 19.68 5.65 19.73 5.71 19.77C5.89 19.92 6.09 20.06 6.28 20.2C6.35 20.25 6.41 20.29 6.48 20.34C6.67 20.47 6.87 20.59 7.08 20.7C7.15 20.74 7.23 20.79 7.3 20.83C7.5 20.94 7.71 21.04 7.93 21.13C8.01 21.17 8.09 21.21 8.17 21.24C8.39 21.33 8.61 21.41 8.83 21.48C8.91 21.51 8.99 21.54 9.07 21.56C9.31 21.63 9.55 21.69 9.79 21.75C9.86 21.77 9.93 21.79 10.01 21.8C10.29 21.86 10.57 21.9 10.86 21.93C10.9 21.93 10.94 21.94 10.98 21.95C11.32 21.98 11.66 22 12 22C12.34 22 12.68 21.98 13.01 21.95C13.05 21.95 13.09 21.94 13.13 21.93C13.42 21.9 13.7 21.86 13.98 21.8C14.05 21.79 14.12 21.76 14.2 21.75C14.44 21.69 14.69 21.64 14.92 21.56C15 21.53 15.08 21.5 15.16 21.48C15.38 21.4 15.61 21.33 15.82 21.24C15.9 21.21 15.98 21.17 16.06 21.13C16.27 21.04 16.48 20.94 16.69 20.83C16.77 20.79 16.84 20.74 16.91 20.7C17.11 20.58 17.31 20.47 17.51 20.34C17.58 20.3 17.64 20.25 17.71 20.2C17.91 20.06 18.1 19.92 18.28 19.77C18.34 19.72 18.39 19.67 18.45 19.63C18.56 19.54 18.67 19.45 18.77 19.36C18.77 19.35 18.77 19.35 18.76 19.34C20.75 17.51 22 14.9 22 12ZM16.94 16.97C14.23 15.15 9.79 15.15 7.06 16.97C6.62 17.26 6.26 17.6 5.96 17.97C4.44 16.43 3.5 14.32 3.5 12C3.5 7.31 7.31 3.5 12 3.5C16.69 3.5 20.5 7.31 20.5 12C20.5 14.32 19.56 16.43 18.04 17.97C17.75 17.6 17.38 17.26 16.94 16.97Z" fill="#5AED83"/>
+			<path d="M12 6.92993C9.93 6.92993 8.25 8.60993 8.25 10.6799C8.25 12.7099 9.84 14.3599 11.95 14.4199C11.98 14.4199 12.02 14.4199 12.04 14.4199C12.06 14.4199 12.09 14.4199 12.11 14.4199C12.12 14.4199 12.13 14.4199 12.13 14.4199C14.15 14.3499 15.74 12.7099 15.75 10.6799C15.75 8.60993 14.07 6.92993 12 6.92993Z" fill="#5AED83"/>
+		</svg>
+			
+	</span>
+	<span class="nav-link-text">Account</span>
+</a>
 
-									</span>
-									<span class="nav-link-text">Settings</span>
-								</a>
-
-							</li>
-							<!--//Item-Settings-->
+</li>
+<!--//Item-Settings-->
 
 						</ul>
 						<!--//footer-menu-->
