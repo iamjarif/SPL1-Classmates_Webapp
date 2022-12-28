@@ -350,12 +350,12 @@ include("login.php");
 								</div>
 								<!--//item-->
 								<?php
+								session_start();
+								include("connection.php");
 								echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
 								echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
 								echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
 								echo'<link rel="stylesheet" href="assets/css/styles.css">';
-								include("connection.php");
-								include("login.php");
 								$user=$_SESSION['SId'];
 								$get_user="select * from students where SId='$user'";
 								$run_user=mysqli_query($conn,$get_user);
@@ -368,7 +368,29 @@ include("login.php");
 								echo'<div class="row justify-content-between align-items-center">';
 								echo'<div class="col-auto">';
 								echo'<div class="item-label"><strong>Name</strong></div>';
-								echo'<div class="item-data">"$user_name"</div>';
+								echo'<div class="item-data">';
+								echo $user_name;
+								echo'</div>';
+								echo'<br>';
+
+								echo'<div class="item border-bottom py-3">';
+								echo'<div class="row justify-content-between align-items-center">';
+								echo'<div class="col-auto">';
+								echo'<div class="item-label"><strong>Email</strong></div>';
+								echo'<div class="item-data">';
+								echo $user_email;
+								echo'</div>';
+								echo"<br>";
+
+
+								echo'<div class="item border-bottom py-3">';
+								echo'<div class="row justify-content-between align-items-center">';
+								echo'<div class="col-auto">';
+								echo'<div class="item-label"><strong>Student ID</strong></div>';
+								echo'<div class="item-data">';
+								echo $user_id;
+								echo'</div>';
+								
 								
 								
 								
@@ -381,136 +403,9 @@ include("login.php");
 											<div class="item-data">'$user_name'</div>
 										</div> -->
 										<!--//col-->
-										<div class="col text-end">
-											<a class="btn-sm app-btn-secondary" href="#">Change</a>
-										</div>
-										<!--//col-->
-									</div>
-									<!--//row-->
-								</div>
-								<!--//item-->
-								<div class="item border-bottom py-3">
-									<div class="row justify-content-between align-items-center">
-										<div class="col-auto">
-											<div class="item-label"><strong>Email</strong></div>
-											<div class="item-data">'$user_email'</div>
-										</div>
-										<!--//col-->
-										<div class="col text-end">
-											<a class="btn-sm app-btn-secondary" href="#">Change</a>
-										</div>
-										<!--//col-->
-									</div>
-									<!--//row-->
-								</div>
-								<!--//item-->
-								<div class="item border-bottom py-3">
-									<div class="row justify-content-between align-items-center">
-										<div class="col-auto">
-											<div class="item-label"><strong>ID</strong></div>
-											<div class="item-data">
-												'$user_id'
-											</div>
-										</div>
-										<!--//col-->
-										<div class="col text-end">
-											<a class="btn-sm app-btn-secondary" href="#">Change</a>
-										</div>
-										<!--//col-->
-									</div>
-									<!--//row-->
-								</div>
-								<!--//item-->
-								
-							</div>
-							<!--//app-card-body-->
-							<div class="app-card-footer p-4 mt-auto">
-								<button type="submit" class="btn app-btn-primary">Save Changes</button>
-							</div>
-							
-							<!--//app-card-footer-->
-
-						</div>
-						<!--//app-card-->
-					</div>
-					<!--//col-->
-					
-					<div class="col-12 col-lg-13">
-						<div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
-							<div class="app-card-header p-3 border-bottom-0">
-								<div class="row align-items-center gx-3">
-									<div class="col-auto">
-										<div class="app-icon-holder">
-											<svg width="42" height="42" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path d="M20.91 11.1201V6.73007C20.91 5.91007 20.29 4.98007 19.52 4.67007L13.95 2.39007C12.7 1.88007 11.29 1.88007 10.04 2.39007L4.46997 4.67007C3.70997 4.98007 3.08997 5.91007 3.08997 6.73007V11.1201C3.08997 16.0101 6.63997 20.5901 11.49 21.9301C11.82 22.0201 12.18 22.0201 12.51 21.9301C17.36 20.5901 20.91 16.0101 20.91 11.1201ZM12.75 12.8701V15.5001C12.75 15.9101 12.41 16.2501 12 16.2501C11.59 16.2501 11.25 15.9101 11.25 15.5001V12.8701C10.24 12.5501 9.49997 11.6101 9.49997 10.5001C9.49997 9.12007 10.62 8.00007 12 8.00007C13.38 8.00007 14.5 9.12007 14.5 10.5001C14.5 11.6201 13.76 12.5501 12.75 12.8701Z" fill="#292D32"/>
-											</svg>
-												
-												
-										</div>
-										<!--//icon-holder-->
-
-									</div>
-									<!--//col-->
-									<div class="col-auto">
-										<h4 class="app-card-title">Security</h4>
-									</div>
-									<!--//col-->
-								</div>
-								<!--//row-->
-							</div>
-							<!--//app-card-header-->
-							<div class="app-card-body px-4 w-100">
-
-								<div class="item border-bottom py-3">
-									<div class="row justify-content-between align-items-center">
-										<div class="col-auto">
-											<div class="item-label"><strong>Password</strong></div>
-											<div class="item-data">••••••••</div>
-										</div>
-										<!--//col-->
-										<div class="col text-end">
-											<a class="btn-sm app-btn-secondary" href="#">Change</a>
-										</div>
-										<!--//col-->
-									</div>
-									<!--//row-->
-								</div>
-								<!--//item-->
-								<div class="item border-bottom py-3">
-									<div class="row justify-content-between align-items-center">
-										<div class="col-auto">
-											<div class="item-label"><strong> New Password</strong></div>
-											<div class="item-data">••••••••</div>
-										</div>
+										
 										<!--//col-->
 									
-									</div>
-									<!--//row-->
-								</div>
-								<!--//item-->
-							</div>
-							<!--//app-card-body-->
-
-							<div class="app-card-footer p-4 mt-auto">
-								<button type="submit" class="btn app-btn-primary">Save Changes</button>
-							</div>
-							<!--//app-card-footer-->
-
-						</div>
-						<!--//app-card-->
-					</div>
-					
-				</div>
-				<!--//row-->
-
-			</div>
-			<!--//container-fluid-->
-		</div>
-		<!--//app-content-->
-
-
-	</div>
-	<!--//app-wrapper-->
 
 
 	<!-- Javascript -->
