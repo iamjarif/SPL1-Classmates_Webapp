@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Lecture Notes</title>
+    <title>Question Bank</title>
 
     <!-- Meta -->
     <meta charset="utf-8">
@@ -300,7 +300,7 @@
 
             <div class="container-xl">
 
-                <h1 class="app-page-title"><a class="text-link" href="apps.html">Resources</a> / <a2>Lecture Notes</a2>
+                <h1 class="app-page-title"><a class="text-link" href="apps.html">Resources</a> / <a2>Question Bank</a2>
                 </h1>
 
                 <div class="col-auto">
@@ -308,17 +308,7 @@
                         <div class="row g-2 justify-content-start justify-content-md-start align-items-center">
 
                             <div class="col-auto">
-
-                                <select class="form-select w-auto">
-                                    <option selected value="option-1">All</option>
-                                    <option value="option-2">1st Semester</option>
-                                    <option value="option-3">2nd Semester</option>
-                                    <option value="option-4">3rd Semester</option>
-
-                                </select>
-                            </div>
-                            <div class="col-auto">
-                                <a class="btn app-btn-primary" href="uploadNotes.html">
+                                <a class="btn app-btn-primary" href="uploadques.html">
                                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -346,21 +336,87 @@
                                         <table class="table app-table-hover mb-0 text-left">
                                             <thead>
                                                 <tr>
+                                                    <th class="cell">Year</th>
                                                     <th class="cell">Course Name</th>
-                                                    <th class="cell">Topic Name</th>
-                                                    <th class="cell">Upload Date</th>
+                                                    <th class="cell">Exam Name</th>
+                                                 
                                                     <th class="cell">Uploaded by</th>
                                                     <th class="cell">View</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
+
+                                            <tr>
+                                            <?php
+                                                 include("connection.php");
+                                                 $queslistquery="select * from questionbank order by quesuploadtime desc";
+                                                 $quesdata=mysqli_query($conn,$queslistquery);
+                                                 $totalrows=mysqli_num_rows($quesdata);
+
+                                                
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($quesdata))
+                                                    {
+
+
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+
+                                                        echo"<td>";
+                                                        echo $result['year'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['ExamName'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
+
+                                                
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['qlink'];
+                                                      echo">";
+                                                      echo "Open</a>";
+                                                      echo'</td>';
+
+                                           
+
+
+                                                       echo"</tr>";
+
+                                                         
+                                                        
+                                                    }
+                                                 } 
+
+
+
+                                                ?>
+
+                                            
+
                                                 <tr>
+                                                    <td class="cell">2019-2020</td>
                                                     <td class="cell">CSE4307</td>
-                                                    <td class="cell">Database Diagram drawing</td>
+                                                    <td class="cell">Mid</td>
                                                     <td class="cell"><span>17 Oct</span><span class="note">2:16
                                                             PM</span></td>
-                                                    <td class="cell">Zannatul Zerin</td>
+                                                    <td class="cell">Lomatul Mahzabin</td>
                                                     <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
                                                     </td>
                                                     <td>
@@ -389,6 +445,110 @@
 
                                                 </tr>
 
+                                                <tr>
+                                                    <td class="cell">2019-2020</td>
+                                                    <td class="cell">CSE4307</td>
+                                                    <td class="cell">Final</td>
+                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
+                                                            PM</span></td>
+                                                    <td class="cell">Lomatul Mahzabin</td>
+                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
+                                                    </td>
+                                                    <td>
+
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle no-toggle-arrow"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                                    class="bi bi-three-dots-vertical"
+                                                                    fill="currentColor"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                                                </svg>
+                                                            </div>
+                                                            <!--//dropdown-toggle-->
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                            </ul>
+                                                        
+                                                                
+                                                        </div>
+                                                        <!--//dropdown-->
+
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="cell">2019-2020</td>
+                                                    <td class="cell">CSE4308</td>
+                                                    <td class="cell">Mid</td>
+                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
+                                                            PM</span></td>
+                                                    <td class="cell">Lomatul Mahzabin</td>
+                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
+                                                    </td>
+                                                    <td>
+
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle no-toggle-arrow"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                                    class="bi bi-three-dots-vertical"
+                                                                    fill="currentColor"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                                                </svg>
+                                                            </div>
+                                                            <!--//dropdown-toggle-->
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                            </ul>
+                                                        
+                                                                
+                                                        </div>
+                                                        <!--//dropdown-->
+
+                                                    </td>
+
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="cell">2019-2020</td>
+                                                    <td class="cell">CSE4308</td>
+                                                    <td class="cell">Final</td>
+                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
+                                                            PM</span></td>
+                                                    <td class="cell">Lomatul Mahzabin</td>
+                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
+                                                    </td>
+                                                    <td>
+
+                                                        <div class="dropdown">
+                                                            <div class="dropdown-toggle no-toggle-arrow"
+                                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
+                                                                    class="bi bi-three-dots-vertical"
+                                                                    fill="currentColor"
+                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd"
+                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                                                                </svg>
+                                                            </div>
+                                                            <!--//dropdown-toggle-->
+                                                            <ul class="dropdown-menu">
+                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                            </ul>
+                                                        
+                                                                
+                                                        </div>
+                                                        <!--//dropdown-->
+
+                                                    </td>
+
+                                                </tr>
 
                                             </tbody>
                                         </table>
