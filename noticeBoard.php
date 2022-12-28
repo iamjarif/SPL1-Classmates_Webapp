@@ -304,7 +304,44 @@
             <!--//table-utilities-->
           </div>
           <!--//col-auto-->
+          <?php
+          include("connection.php");
+          $noticelistquery="select * from notice order by time desc";
+          $noticedata=mysqli_query($conn,$noticelistquery);
+          $totalrows=mysqli_num_rows($noticedata);
+          if($totalrows>0)
+          {
+            while($result=mysqli_fetch_assoc($noticedata))
+            {
+              echo' <div class="app-card app-card-notification shadow-sm mb-8">
+              <div class="app-card-header px-4 py-3">
+                <div class="row g-3 align-items-center">
+                  <div class="col-12 col-lg-auto text-center text-lg-start">
+                    <h4 class="notification-title mb-1">';
+              echo $result['ntitle'];
+              echo'<ul class="notification-meta list-inline mb-0">
+              <li class="list-inline-item">';
+              echo$result['time'];
+              echo'</li>
+              <li class="list-inline-item">|</li>
+              <li class="list-inline-item">';
+              echo'ID:';
+              echo$result['SId'];
+              echo'</li>
+              </ul>';
+              echo'<div class="notification-content">';
+              echo $result['ndescription'];
+              echo'</div>';
+            }
+          }
 
+           
+            
+          
+          
+          
+          
+          ?>
           <div class="app-card app-card-notification shadow-sm mb-8">
             <div class="app-card-header px-4 py-3">
               <div class="row g-3 align-items-center">

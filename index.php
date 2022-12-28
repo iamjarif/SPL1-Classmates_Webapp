@@ -216,7 +216,7 @@
                 <div class="app-card-header p-6">
                   <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                      <a href="noticeBoard.html" class="app-card-title"
+                      <a href="noticeBoard.php" class="app-card-title"
                         >Recent Notices</a
                       >
                     </div>
@@ -296,7 +296,7 @@
                 <div class="app-card-header p-6">
                   <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                      <a href="books.html" class="app-card-title"
+                      <a href="booksfrontend.php" class="app-card-title"
                         >Recently Added Books</a
                       >
                     </div>
@@ -324,56 +324,73 @@
                                 <tr>
                                   <th class="cell">Course Name</th>
                                   <th class="cell">Book Name</th>
-
+                                  <th class="cell">Id</th>
                                   <th class="cell">View</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td class="cell">CSE4307</td>
-                                  <td class="cell">Database-System-Concepts</td>
+                                <?php
 
-                                  <td class="cell">
-                                    <a class="btn-sm app-btn-extra" href="#"
-                                      >Open</a
-                                    >
-                                  </td>
-                                </tr>
+                                                 include("connection.php");
+                                                 $booklistquery="select * from books order by uploadtime desc";
+                                                 $bookdata=mysqli_query($conn,$booklistquery);
+                                                 $totalrows=mysqli_num_rows($bookdata);
 
-                                <tr>
-                                  <td class="cell">CSE4308</td>
-                                  <td class="cell">Database MGS ED2</td>
+                                                $count=0;
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($bookdata))
+                                                    {
+                                                      $count++;
+                                                       if($count<4)
+                                                       {
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
 
-                                  <td class="cell">
-                                    <a class="btn-sm app-btn-extra" href="#"
-                                      >Open</a
-                                    >
-                                  </td>
-                                </tr>
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
 
-                                <tr>
-                                  <td class="cell">CSE4309</td>
-                                  <td class="cell">
-                                    Introduction-To-The-Theory-Of-Computation-Michael-Sipser
-                                  </td>
+                                                        echo"<td>";
+                                                        echo $result['bname'];
+                                                        echo"</td>";
 
-                                  <td class="cell">
-                                    <a class="btn-sm app-btn-extra" href="#"
-                                      >Open</a
-                                    >
-                                  </td>
-                                </tr>
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
 
-                                <tr>
-                                  <td class="cell">CSE4301</td>
-                                  <td class="cell">99 bottles of oop</td>
+                                                
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['bookurl'];
+                                                      echo">";
+                                                      echo "Open</a>";
+                                                      echo'</td>';
 
-                                  <td class="cell">
-                                    <a class="btn-sm app-btn-extra" href="#"
-                                      >Open</a
-                                    >
-                                  </td>
-                                </tr>
+                                           
+
+
+                                                       echo"</tr>";
+
+                                                       }
+
+                                                        
+                                                         
+                                                        
+                                                    }
+                                                 } 
+
+
+
+                                   ?> 
+
+                               
                               </tbody>
                             </table>
                           </div>
@@ -430,7 +447,7 @@
                 <div class="app-card-header p-6">
                   <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                      <a href="questionBank.html" class="app-card-title"
+                      <a href="questionBankfrontend.php" class="app-card-title"
                         >Recently Added Questions</a
                       >
                     </div>
@@ -459,33 +476,82 @@
                                   <th class="cell">Year</th>
                                   <th class="cell">Course Name</th>
                                   <th class="cell">Exam Name</th>
+                                  <th class="cell">ID</th>
                                   <th class="cell">View</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td class="cell">2019-2020</td>
-                                  <td class="cell">CSE4307</td>
-                                  <td class="cell">Mid</td>
+                                <?php
+                                                 include("connection.php");
+                                                 $queslistquery="select * from questionbank order by quesuploadtime desc ";
+                                                 $quesdata=mysqli_query($conn,$queslistquery);
+                                                 $totalrows=mysqli_num_rows($quesdata);
 
-                                  <td class="cell">
-                                    <a class="btn-sm app-btn-extra" href="#"
-                                      >Open</a
-                                    >
-                                  </td>
-                                </tr>
+                                                
+                                                 if($totalrows>0 )
+                                                 {
+                                                   $quescount=0;
+                                                    while( $result=mysqli_fetch_assoc($quesdata))
+                                                    {
+                                                     $quescount++;
+                                                     if($quescount<4)
+                                                     {
+                                                      echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                      echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                      echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                      echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                      echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                      echo"<tr>";
 
-                                <tr>
-                                  <td class="cell">2019-2020</td>
-                                  <td class="cell">CSE4307</td>
-                                  <td class="cell">Final</td>
 
-                                  <td class="cell">
-                                    <a class="btn-sm app-btn-extra" href="#"
-                                      >Open</a
-                                    >
-                                  </td>
-                                </tr>
+                                                      echo"<td>";
+                                                      echo $result['year'];
+                                                      echo"</td>";
+
+                                                      echo"<td>";
+                                                      echo $result['cname'];
+                                                      echo"</td>";
+
+                                                      echo"<td>";
+                                                      echo $result['ExamName'];
+                                                      echo"</td>";
+
+                                                      echo"<td>";
+                                                      echo $result['SId'];
+                                                      echo"</td>";
+
+                                              
+                                                    echo'<td class="cell">';
+                                                    echo'<a class="btn-sm app-btn-extra"';
+                                                    echo" href=";
+                                                    echo $result['qlink'];
+                                                    echo">";
+                                                    echo "Open</a>";
+                                                    echo'</td>';
+
+                                         
+
+
+                                                     echo"</tr>";
+
+                                                       
+                                                     }
+                                 
+
+                                                       
+                                                        
+                                                    }
+                                                 } 
+
+
+
+                                                ?>
+
+
+                                                         
+                                                        
+                                                  
                               </tbody>
                             </table>
                           </div>
