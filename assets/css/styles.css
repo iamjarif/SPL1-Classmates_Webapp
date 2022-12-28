@@ -211,7 +211,7 @@ output {
     display: inline-block
 }
 
-iframe {
+.iframe {
     border: 0
 }
 
@@ -7964,6 +7964,16 @@ fieldset:disabled .btn {
     width: 50%
 }
 
+.col-lg-14 {
+    flex: 0 0 auto;
+    width: 25%
+}
+
+.col-lg-15 {
+    flex: 0 0 auto;
+    width: 75%
+}
+
 
 .m-3 {
     margin: 1rem !important
@@ -8278,6 +8288,10 @@ fieldset:disabled .btn {
 
 .pt-5 {
     padding-top: 3rem !important
+}
+
+.pt-6 {
+    padding-top: 1.6rem !important
 }
 
 .pe-0 {
