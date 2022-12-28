@@ -212,7 +212,9 @@ output {
 }
 
 .iframe {
-    border: 0
+    position: relative;
+    background: #22242F;
+    border-radius: 1rem
 }
 
 summary {
