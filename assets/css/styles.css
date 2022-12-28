@@ -2541,7 +2541,7 @@ textarea.form-control-lg {
 .input-group .btn:focus {
     z-index: 3
 }
-
+btn
 .input-group-text {
     display: flex;
     align-items: center;
@@ -2886,6 +2886,19 @@ textarea.form-control.is-invalid {
 
 .app-btn-extra:hover {
     background: #fff;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+.app-btn-extra2 {
+    border-radius: 20px;
+    color: #000;
+    border: 1px solid #FFDD50;
+    background: #ffffff
+}
+
+.app-btn-extra2:hover {
+    background: #f4b400;
     color: #000;
     border: 1px solid #fff;
 }
@@ -7707,6 +7720,10 @@ fieldset:disabled .btn {
     --bs-border-opacity: 1
 }
 
+.w-10 {
+    width: 10% !important
+}
+
 .w-25 {
     width: 25% !important
 }
@@ -7975,6 +7992,16 @@ fieldset:disabled .btn {
 .col-lg-15 {
     flex: 0 0 auto;
     width: 75%
+}
+
+.col-lg-16 {
+    flex: 0 0 auto;
+    width: 90%
+}
+
+.col-lg-17 {
+    flex: 0 0 auto;
+    width: 10%
 }
 
 

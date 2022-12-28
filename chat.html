@@ -176,45 +176,29 @@
 
 			<div class="container-xl">
 
-				<h1 class="app-page-title">Group Discussion</h1>
-
-                <iframe src="chatbackend1.php" class="iframe mb-4" width="1350px" height="600px" scrolling="yes"></iframe>
-
                 <div class="row g-4 mb-4">
-					<div class="col-12 col-lg-15">
-						<form action="chatbackend2.php" method="post">
-                            <input type="textarea" class="uploadForm" name="messageinput" value="Write a message"/>
+                    <div class="col-12 col-lg-16">
+                        <h1 class="app-page-title">Group Discussion</h1>
+                    </div>
+                    <!--//col-->
+        
+                    <div class="col-12 col-lg-17 mt-5 ">
+                        <form action="Refreshchat.php" method="post">
+                            <button type="submit" name="refresh" class="btn app-btn-extra2 theme-btn mb-3">Refresh</button>
                         </form>
-					</div>
-					<!--//col-->
+                    </div>
+                    <!--//col-->
+                
 
-					<div class="col-12 col-lg-14">
-                        <div class="row g-4 mb-4">
-                            <div class="col-12 col-lg-15">
-                                <form action="chatbackend2.php" method="post">
-                                    <input type="submit" class="btn app-btn-primary w-100 theme-btn mx-auto" value="send"><br><br>
-                                </form>
+                <iframe src="chatbackend1.php" class="iframe mb-4" width="1350px" height="500px" scrolling="yes"></iframe>
 
-                            </div>
-                            <div class="col-12 col-lg-14">
-                                <form action="Refreshchat.php" method="post">
-                                    <button type="submit" name="refresh" class="btn app-btn-primary theme-btn mx-auto">Refresh</button>
-                                </form>
-
-                            </div>
-                        </div>
-
-					</div>
-					<!--//col-->
-
-				</div>
-				<!--//row-->
-
-				
+                <form action="chatbackend2.php" method="post">
+                    <input type="textarea" class="uploadForm  w-100" name="messageinput" value="Write a message"/>
+                    <input type="submit" class="btn app-btn-primary w-10 theme-btn mx-auto" value="send"><br><br>
+                </form>
 
                 
 
-                
 
 			</div>
 			<!--//container-fluid-->
