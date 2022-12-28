@@ -401,7 +401,12 @@
                                                         echo"</td>";
 
                                                 
-                                                      echo'<td class="cell"><a class="btn-sm app-btn-extra" href=$result["bookurl"]>Open</a>';
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['bookurl'];
+                                                      echo">";
+                                                      echo "Open</a>";
                                                       echo'</td>';
 
                                            

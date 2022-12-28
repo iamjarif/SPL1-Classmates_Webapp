@@ -10,7 +10,7 @@ if(isset($_POST['SignUp']))
     $Email=mysqli_escape_string($conn,$_POST['Email']);
     $Password=mysqli_escape_string($conn,$_POST['Password']);
     $ConfirmPassword=mysqli_escape_string($conn,$_POST['ConfirmPassword']);
-    $hashed_password=md5($Password);
+    $hashed_password=password_hash($Password,PASSWORD_DEFAULT);
     
     
     if($_POST["Password"] === $_POST["ConfirmPassword"])
