@@ -15,6 +15,8 @@ if(isset($_POST['login']))
     if($checkUser==1)
    {
     $_SESSION['SId']=$LSId;
+    $_SESSION['Name']=$Name;
+    $_SESSION['success'] = "You are now logged in";
     echo"<script>alert('Log in was successful.')</script>";
     echo"<script> window.location.href ='index.html'</script>";
     

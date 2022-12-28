@@ -333,111 +333,70 @@
                                                     <th class="cell">Teacher's Name</th>
                                                     <th class="cell">E-Mail</th>
                                                     <th class="cell">Phone no.</th>
-                                                    <th class="cell">Adding Date</th>
+                                                    <th class="cell">Department</th>
                                                     <th class="cell">Added by</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td class="cell">Abu Raihan Mostofa Kamal</td>
-                                                    <td class="cell">raihan.kamal@iut-dhaka.edu</td>
-                                                    <td class="cell">01843925543</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td>
 
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
+
+                                                <?php
+                                                 include("connection.php");
+                                                 $teachersinfoquery="select * from teachersinfo";
+                                                 $teacherdata=mysqli_query($conn,$teachersinfoquery);
+                                                 $totalrows=mysqli_num_rows($teacherdata);
+
+                                                
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($teacherdata))
+                                                    {
+
+
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+                                                        echo"<td>";
+                                                        echo $result['tname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['temail'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['tnumber'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['department'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
+
+                                
+
+                                                       echo"</tr>";
+
+                                                         
                                                         
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
+                                                    }
+                                                 } 
 
-                                                    </td>
 
+
+                                                ?> 
+
+                                                    
                                                 </tr>
-
-                                                <tr>
-                                                    <td class="cell">Fardin Saad</td>
-                                                    <td class="cell">fardinsaad@iut-dhaka.edu</td>
-                                                    <td class="cell">01622036553</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td>
-
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="cell">Md Jubair Ibn Mostofa</td>
-                                                    <td class="cell">jubair@iut-dhaka.edu</td>
-                                                    <td class="cell">01783905098</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td>
-
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-
-                                                    </td>
-
-                                                </tr>
-
                                                 
 
                                             </tbody>

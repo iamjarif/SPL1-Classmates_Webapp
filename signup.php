@@ -1,6 +1,7 @@
 <?php
 include("Connection.php");
 include("passwordverification.php");
+
 if(isset($_POST['SignUp']))
 {
    

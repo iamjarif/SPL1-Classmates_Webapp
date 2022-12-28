@@ -349,12 +349,37 @@ include("login.php");
 									<!--//row-->
 								</div>
 								<!--//item-->
-								<div class="item border-bottom py-3">
-									<div class="row justify-content-between align-items-center">
+								<?php
+								echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+								echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+								echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+								echo'<link rel="stylesheet" href="assets/css/styles.css">';
+								include("connection.php");
+								include("login.php");
+								$user=$_SESSION['SId'];
+								$get_user="select * from students where SId='$user'";
+								$run_user=mysqli_query($conn,$get_user);
+								$row=mysqli_fetch_array($run_user);
+								$user_id=$row['SId'];
+								$user_name=$row['Name'];
+								$user_email=$row['Email'];
+
+								echo'<div class="item border-bottom py-3">';
+								echo'<div class="row justify-content-between align-items-center">';
+								echo'<div class="col-auto">';
+								echo'<div class="item-label"><strong>Name</strong></div>';
+								echo'<div class="item-data">"$user_name"</div>';
+								
+								
+								
+								
+								?>
+								<!-- <div class="item border-bottom py-3">
+								<div class="row justify-content-between align-items-center">
 										<div class="col-auto">
 											<div class="item-label"><strong>Name</strong></div>
 											<div class="item-data">'$user_name'</div>
-										</div>
+										</div> -->
 										<!--//col-->
 										<div class="col text-end">
 											<a class="btn-sm app-btn-secondary" href="#">Change</a>

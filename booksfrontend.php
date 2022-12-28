@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -348,113 +350,74 @@
                                                 <tr>
                                                     <th class="cell">Course Name</th>
                                                     <th class="cell">Book Name</th>
-                                                    <th class="cell">Upload Date</th>
-                                                    <th class="cell">Uploaded by</th>
+                                                
+                                                    <th class="cell">Student Id</th>
                                                     <th class="cell">View</th>
 
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr>
-                                                    <td class="cell">CSE4307</td>
-                                                    <td class="cell">Database-System-Concepts</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-                                                    <td>
+                                          
+                                              
 
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
+                                                 <tr>
+                                                   
+                                                   
+                                                   
+                                                  
+
+                                            
+
+                                                <?php
+                                                 include("connection.php");
+                                                 $booklistquery="select * from books";
+                                                 $bookdata=mysqli_query($conn,$booklistquery);
+                                                 $totalrows=mysqli_num_rows($bookdata);
+
+                                                
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($bookdata))
+                                                    {
+
+
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['bname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
+
+                                                
+                                                      echo'<td class="cell"><a class="btn-sm app-btn-extra" href=$result["bookurl"]>Open</a>';
+                                                      echo'</td>';
+
+                                           
+
+
+                                                       echo"</tr>";
+
+                                                         
                                                         
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
+                                                    }
+                                                 } 
 
-                                                    </td>
 
-                                                </tr>
 
-                                                <tr>
-                                                    <td class="cell">CSE4308</td>
-                                                    <td class="cell">Database MGS ED2</td>
-                                                    <td class="cell"><span>11 Oct</span><span class="note">8:30
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-                                                    </td>
-                                                </tr>
+                                                ?> 
 
-                                                <tr>
-                                                    <td class="cell">CSE4309</td>
-                                                    <td class="cell">Introduction-To-The-Theory-Of-Computation-Michael-Sipser</td>
-                                                    <td class="cell"><span>5 Oct</span><span class="note">8:16
-                                                            PM</span></td>
-                                                    <td class="cell">Nibir Rahman</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-
-                                                    <td>
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-                                                    </td>
-
-                                                    
-                                                </tr>
-
-                                                <tr>
                                                     <td class="cell">CSE4301</td>
                                                     <td class="cell">99 bottles of oop</td>
                                                     <td class="cell"><span>3 Oct</span><span class="note">12:30
@@ -534,3 +497,4 @@
 </body>
 
 </html>
+
