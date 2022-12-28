@@ -194,8 +194,9 @@ include("login.php");
 			<div class="container-xl">
 
 				<h1 class="app-page-title">My Account</h1>
-				<div class="row gy-4">
-					<div class="col-12 col-lg-13">
+
+				
+					<div class="col-12">
 						<div class="app-card app-card-account shadow-sm d-flex flex-column align-items-start">
 							<div class="app-card-header p-3 border-bottom-0">
 								<div class="row align-items-center gx-3">
@@ -220,22 +221,7 @@ include("login.php");
 							</div>
 							<!--//app-card-header-->
 							<div class="app-card-body px-4 w-100">
-								<div class="item border-bottom py-3">
-									<div class="row justify-content-between align-items-center">
-										<div class="col-auto">
-											<div class="item-label mb-2"><strong>Photo</strong></div>
-											<div class="item-data"><img class="profile-image"
-													src="assets/images/user.png" alt=""></div>
-										</div>
-										<!--//col-->
-										<div class="col text-end">
-											<a class="btn-sm app-btn-secondary" href="#">Change</a>
-										</div>
-										<!--//col-->
-									</div>
-									<!--//row-->
-								</div>
-								<!--//item-->
+								
 								<?php
 								session_start();
 								include("connection.php");
