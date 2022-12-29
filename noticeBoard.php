@@ -346,7 +346,7 @@
                                   echo'</div>';     
                                   
                                   echo'<td class="cell">';
-                                  echo'<a class="btn app-btn-extra2 theme-btn mb-3"';
+                                  echo'<a class="btn app-btn-extra2 theme-btn mb-3 mt-3"';
                                   echo" href=";
                                   echo'"';
                                   echo "deletenotice.php?delete_id=";
