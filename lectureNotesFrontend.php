@@ -202,16 +202,7 @@
                     <div class="page-utilities">
                         <div class="row g-2 justify-content-start justify-content-md-start align-items-center">
 
-                            <div class="col-auto">
-
-                                <select class="form-select w-auto">
-                                    <option selected value="option-1">All</option>
-                                    <option value="option-2">1st Semester</option>
-                                    <option value="option-3">2nd Semester</option>
-                                    <option value="option-4">3rd Semester</option>
-
-                                </select>
-                            </div>
+                            
                             <div class="col-auto">
                                 <a class="btn app-btn-primary" href="uploadNotes.html">
                                     <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
@@ -311,7 +302,7 @@
                                                       echo'"';
 
                                                       echo">";
-                                                      echo"delete";
+                                                      echo"Delete";
                                                       echo "</a>";
                                                     
                                                       echo'</td>';
