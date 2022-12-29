@@ -5,12 +5,13 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/SMTP.php';
+require 'PHPMailer/Exception.php';
 
 function SendMail($reset_email,$reset_token)
 {
-    require ('<PHPMailer/PHPMailer.php');
-    require ('PHPMailer/SMTP.php');
-    require ('PHPMailer/Exception.php');
+   
 
     $mail = new PHPMailer(true);
 
@@ -22,8 +23,8 @@ function SendMail($reset_email,$reset_token)
         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
         $mail->Username   = 'tamimwasif4829@gmail.com';                     //SMTP username
         $mail->Password   = 'pnqzjymbihyluzvd';                               //SMTP password
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
-        $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+        $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
     
         //Recipients
         $mail->setFrom('tamimwasif4829@gmail.com', 'Classmates.');
@@ -32,19 +33,20 @@ function SendMail($reset_email,$reset_token)
         $mail->addAddress($reset_email);     //Add a recipient
        
         //Attachments
-        $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-        $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+        // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
+        // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
     
         //Content
         $mail->isHTML(true);                                  //Set email format to HTML
         $mail->Subject = 'Password reset link from classmates.';
-        $mail->Body    = 'Here is the reset password link for your profile the link is given below:<br>';
+        $mail->Body    = "Here is the reset password link for your profile the link is given below:<br>
+                          <a href='http:/localhost/update_password.php?email=$reset_email&reset_token=$reset_token'>Update Password</a>";
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
     
         $mail->send();
-        echo 'Message has been sent';
+        return true;
     } catch (Exception $e) {
-        echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        return false;
     }
 }
 if(isset($_POST['reset_password']))
@@ -61,10 +63,12 @@ if(isset($_POST['reset_password']))
         date_default_timezone_set('Asia/Dhaka');
         $date=date("Y-m-d");
         $update_query="update `students` set `password_reset_token`='$reset_token',`token_expire`='$date' where `email`='$reset_email'";
-        if(mysqli_query($conn,$update_query)&& SendMail($reset_email,$reset_token))
+        if(mysqli_query($conn,$update_query))
         {
+            SendMail($reset_email,$reset_token);
             echo"<script>alert('Password reset token is sent to mail')</script>";
             echo"<script> window.location.href ='reset-password.html'</script>";
+        
         }
         else
         {
