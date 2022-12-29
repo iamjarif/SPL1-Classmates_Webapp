@@ -297,84 +297,79 @@
             <!--//table-utilities-->
           </div>
           <!--//col-auto-->
-          <?php
-          include("connection.php");
-          $noticelistquery="select * from notice order by time desc";
-          $noticedata=mysqli_query($conn,$noticelistquery);
-          $totalrows=mysqli_num_rows($noticedata);
-          if($totalrows>0)
-          {
-            while($result=mysqli_fetch_assoc($noticedata))
-            {
-              $notice_no=$result['nid'];
-              echo' <div class="app-card app-card-notification shadow-sm mb-8  ">
+
+          <div class="app-card app-card-notification shadow-sm mb-8  ">
                  <div class="app-card-header px-4 py-3">
-                  <div class="row g-3 align-items-center">         
-                  <div class="col-12 col-lg-auto text-center text-lg-start">
-                    <h4 class="notification-title mb-1 mt-3">';
-              echo $result['ntitle'];
-              echo'<ul class="notification-meta list-inline mb-0 mt-2">
-              <li class="list-inline-item">';
-              echo$result['time'];
-              echo'</li>
-              <li class="list-inline-item">|</li>
-              <li class="list-inline-item">';
-              echo'ID:';
-              echo$result['SId'];
-              echo'</li>
-              </ul>';
-              echo'<div class="notification-content mt-4">';
-              echo $result['ndescription'];
-              echo'</div>';
-              
+                    <?php
+                    include("connection.php");
+                    $noticelistquery="select * from notice order by time desc";
+                    $noticedata=mysqli_query($conn,$noticelistquery);
+                    $totalrows=mysqli_num_rows($noticedata);
+                    if($totalrows>0)
+                    {
+                      while($result=mysqli_fetch_assoc($noticedata))
+                      {
+                        $notice_no=$result['nid'];
+                        echo' <div class="row g-3 align-items-center">         
+                            <div class="col-12 col-lg-auto text-center text-lg-start">
+                              <h4 class="notification-title mb-1 mt-3">';
+                        echo $result['ntitle'];
+                        echo'<ul class="notification-meta list-inline mb-0 mt-2">
+                        <li class="list-inline-item">';
+                        echo$result['time'];
+                        echo'</li>
+                        <li class="list-inline-item">|</li>
+                        <li class="list-inline-item">';
+                        echo'ID:';
+                        echo$result['SId'];
+                        echo'</li>
+                        </ul>';
+                        echo'<div class="notification-content mt-4">';
+                        echo $result['ndescription'];
+                        echo'</div>';
+                        
 
-              echo'<div class="notification-content">';
-              echo'<a class="btn app-btn-primary  theme-btn mx-auto mt-3"';
-              echo" href=";
-              echo'"';
-              echo "displayNoticeFile.php?display_id=";
-              echo"$notice_no";
-              echo'"';
+                        echo'<div class="notification-content">';
+                        echo'<a class="btn app-btn-primary  theme-btn mx-auto mt-3"';
+                        echo" href=";
+                        echo'"';
+                        echo "displayNoticeFile.php?display_id=";
+                        echo"$notice_no";
+                        echo'"';
 
-              echo">";
-              echo"Download Notice";
-              echo "</a>";
-                                                    
-              echo'</td>';
-              echo'</div>';     
-              
-              echo'<td class="cell">';
-               echo'<a class="btn app-btn-primary  theme-btn mx-auto mt-3"';
-               echo" href=";
-               echo'"';
-               echo "deletenotice.php?delete_id=";
-               echo"$notice_no";
-               echo'"';
+                        echo">";
+                        echo"Download Notice";
+                        echo "</a>";
+                                                              
+                        echo'</td>';
+                        echo'</div>';     
+                        
+                        echo'<td class="cell">';
+                        echo'<a class="btn app-btn-primary  theme-btn mx-auto mt-3"';
+                        echo" href=";
+                        echo'"';
+                        echo "deletenotice.php?delete_id=";
+                        echo"$notice_no";
+                        echo'"';
 
-               echo">";
-               echo"Delete";
-               echo "</a>";
-                                                    
-               echo'</td>';
+                        echo">";
+                        echo"Delete";
+                        echo "</a>";
+                                                              
+                        echo'</td>';
 
-              
-               echo"</tr>";
+                        
+                        echo"</tr>";
 
+                                
                       
-             
-                                                      
-              
-            }
-          }
-
-           
-            
-          
-          
-          
-          
-          ?>
-          
+                                                                
+                        
+                      }
+                    }
+                    ?>
+                  </div>
+          </div>
 
          
            
@@ -391,3 +386,4 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
+
