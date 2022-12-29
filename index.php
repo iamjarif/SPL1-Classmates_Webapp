@@ -476,7 +476,7 @@
                                   <th class="cell">Year</th>
                                   <th class="cell">Course Name</th>
                                   <th class="cell">Exam Name</th>
-                                  <th class="cell">ID</th>
+                                 
                                   <th class="cell">View</th>
                                 </tr>
                               </thead>
@@ -517,9 +517,7 @@
                                                       echo $result['ExamName'];
                                                       echo"</td>";
 
-                                                      echo"<td>";
-                                                      echo $result['SId'];
-                                                      echo"</td>";
+                                                     
 
                                               
                                                     echo'<td class="cell">';
