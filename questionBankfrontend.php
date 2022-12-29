@@ -237,6 +237,7 @@
                                                  
                                                     <th class="cell">Uploaded by</th>
                                                     <th class="cell">View</th>
+                                                    <th class="cell">Delete</th>
 
                                                 </tr>
                                             </thead>
@@ -317,145 +318,12 @@
 
                                             
 
-                                                <tr>
-                                                    <td class="cell">2019-2020</td>
-                                                    <td class="cell">CSE4307</td>
-                                                    <td class="cell">Mid</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-                                                    <td>
+                                                
+                                                
 
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
+                                                
 
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="cell">2019-2020</td>
-                                                    <td class="cell">CSE4307</td>
-                                                    <td class="cell">Final</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-                                                    <td>
-
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="cell">2019-2020</td>
-                                                    <td class="cell">CSE4308</td>
-                                                    <td class="cell">Mid</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-                                                    <td>
-
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-
-                                                    </td>
-
-                                                </tr>
-
-                                                <tr>
-                                                    <td class="cell">2019-2020</td>
-                                                    <td class="cell">CSE4308</td>
-                                                    <td class="cell">Final</td>
-                                                    <td class="cell"><span>17 Oct</span><span class="note">2:16
-                                                            PM</span></td>
-                                                    <td class="cell">Lomatul Mahzabin</td>
-                                                    <td class="cell"><a class="btn-sm app-btn-extra" href="#">Open</a>
-                                                    </td>
-                                                    <td>
-
-                                                        <div class="dropdown">
-                                                            <div class="dropdown-toggle no-toggle-arrow"
-                                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                                <svg width="1em" height="1em" viewBox="0 0 16 16"
-                                                                    class="bi bi-three-dots-vertical"
-                                                                    fill="currentColor"
-                                                                    xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
-                                                                </svg>
-                                                            </div>
-                                                            <!--//dropdown-toggle-->
-                                                            <ul class="dropdown-menu">
-                                                                <li><a class="dropdown-item" href="#">Delete</a></li>
-                                                            </ul>
-                                                        
-                                                                
-                                                        </div>
-                                                        <!--//dropdown-->
-
-                                                    </td>
-
-                                                </tr>
+                                                
 
                                             </tbody>
                                         </table>
