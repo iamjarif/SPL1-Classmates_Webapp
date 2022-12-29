@@ -12187,6 +12187,11 @@ fieldset:disabled .btn {
   margin-bottom: 1.5rem !important;
 }
 
+.mb-9 {
+  margin-top: 1rem;
+  margin-bottom: 3rem !important;
+}
+
 .p-0 {
   padding: 0 !important;
 }

@@ -298,7 +298,7 @@
           </div>
           <!--//col-auto-->
 
-          <div class="app-card app-card-notification shadow-sm mb-8  ">
+          <div class="app-card app-card-notification shadow-sm mb-9  ">
                  <div class="app-card-header px-4 py-3">
                       <div class="row g-3 align-items-center">         
                           <div class="col-12 col-lg-auto text-center text-lg-start">
@@ -346,7 +346,7 @@
                                   echo'</div>';     
                                   
                                   echo'<td class="cell">';
-                                  echo'<a class="btn app-btn-primary  theme-btn mx-auto mt-3"';
+                                  echo'<a class="btn app-btn-extra2 theme-btn mb-3"';
                                   echo" href=";
                                   echo'"';
                                   echo "deletenotice.php?delete_id=";
