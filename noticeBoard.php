@@ -312,8 +312,7 @@
                                 while($result=mysqli_fetch_assoc($noticedata))
                                 {
                                   $notice_no=$result['nid'];
-                                  echo' <div class="row g-3 align-items-center">         
-                                      <div class="col-12 col-lg-auto text-center text-lg-start">
+                                  echo' 
                                         <h4 class="notification-title mb-1 mt-3">';
                                   echo $result['ntitle'];
                                   echo'<ul class="notification-meta list-inline mb-0 mt-2">
