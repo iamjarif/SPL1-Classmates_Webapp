@@ -315,8 +315,7 @@
             {
               $notice_no=$result['nid'];
               echo' <div class="app-card app-card-notification shadow-sm mb-8">
-              <div class="app-card-header px-4 py-3">
-                <div class="row g-3 align-items-center">
+            
                   <div class="col-12 col-lg-auto text-center text-lg-start">
                     <h4 class="notification-title mb-1">';
               echo $result['ntitle'];

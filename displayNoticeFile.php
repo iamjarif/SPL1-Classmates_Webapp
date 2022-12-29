@@ -21,13 +21,17 @@
 
           $notice_display_query="select filename from notice where nid=$display_id";
           $display_notice=mysqli_query($conn,$notice_display_query);
+          $result=mysqli_fetch_assoc($display_notice);
           if($display_notice)
           {
-            echo'<embed ';
-            echo' type="application/pdf"';
-            echo'src="uploadnotice/';
-            echo$result['filename'];
-            echo'"';
+             echo'<meta charset="UTF-8">
+             <meta http-equiv="X-UA-Compatible" content="IE=edge">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">';
+             echo'<embed ';
+             echo' type="application/pdf"';
+             echo'src="uploadnotice/';
+             echo $result['filename'];
+             echo'"';
 
           }
        
