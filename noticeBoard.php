@@ -313,7 +313,7 @@
                                 {
                                   $notice_no=$result['nid'];
                                   echo' 
-                                        <h4 class="app-card-header notification-title mb-1 mt-3">';
+                                        <h4 class="notification-title mb-1 mt-3">';
                                   echo $result['ntitle'];
                                   echo'<ul class="notification-meta list-inline mb-0 mt-2">
                                   <li class="list-inline-item">';
@@ -346,7 +346,7 @@
                                   echo'</div>';     
                                   
                                   echo'<td class="cell">';
-                                  echo'<a class="btn app-btn-extra2 theme-btn mb-3 mt-3"';
+                                  echo'<a class="btn app-btn-extra2 theme-btn mb-5 mt-3"';
                                   echo" href=";
                                   echo'"';
                                   echo "deletenotice.php?delete_id=";
