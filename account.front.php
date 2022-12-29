@@ -262,7 +262,7 @@ include("login.php");
 								// echo'<div class="row justify-content-between align-items-center">';
 								echo'<div class="col-auto">';
 								echo'<div class="item-label"><strong>Student ID</strong></div>';
-								echo'<div class="item-data">';
+								echo'<div class="item-data mb-4">';
 								echo $user_id;
 								echo'</div>';
 								
