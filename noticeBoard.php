@@ -223,14 +223,7 @@
               <div
                 class="row g-2 justify-content-start justify-content-md-start align-items-center"
               >
-                <div class="col-auto">
-                  <select class="form-select w-auto">
-                    <option selected value="option-1">All time</option>
-                    <option value="option-2">Today</option>
-                    <option value="option-3">This week</option>
-                    <option value="option-4">This Month</option>
-                  </select>
-                </div>
+                
 
                 <div class="col-auto">
                   <a class="btn app-btn-primary" href="postNotice.html">
