@@ -255,7 +255,7 @@
                                                     while( $result=mysqli_fetch_assoc($quesdata))
                                                     {
 
-
+                                                        $question_no=$result['qid'];
                                                         echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
                                                         echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
                                                         echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
@@ -289,7 +289,19 @@
                                                       echo "Open</a>";
                                                       echo'</td>';
 
-                                           
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo'"';
+                                                      echo "deletequestions.php?delete_id=";
+                                                      echo"$question_no";
+                                                      echo'"';
+
+                                                      echo">";
+                                                      echo"delete";
+                                                      echo "</a>";
+                                                    
+                                                      echo'</td>';
 
 
                                                        echo"</tr>";

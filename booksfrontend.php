@@ -248,7 +248,7 @@
                                                 
                                                     <th class="cell">Student Id</th>
                                                     <th class="cell">View</th>
-                                                    <th class="cell">delete</th>
+                                                    <th class="cell">Delete</th>
 
 
                                                 </tr>
@@ -316,7 +316,7 @@
                                                       echo'"';
 
                                                       echo">";
-                                                      echo"delete";
+                                                      echo"Delete";
                                                       echo "</a>";
                                                     
                                                       echo'</td>';

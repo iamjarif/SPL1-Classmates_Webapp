@@ -347,7 +347,24 @@
               echo "</a>";
                                                     
               echo'</td>';
-              echo'</div>';                                      
+              echo'</div>';     
+              
+              echo'<td class="cell">';
+               echo'<a class="btn-sm app-btn-extra"';
+               echo" href=";
+               echo'"';
+               echo "deletenotice.php?delete_id=";
+               echo"$notice_no";
+               echo'"';
+
+               echo">";
+               echo"delete";
+               echo "</a>";
+                                                    
+               echo'</td>';
+
+
+               echo"</tr>";
 
                       
              
