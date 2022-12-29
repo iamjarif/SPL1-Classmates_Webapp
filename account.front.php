@@ -215,7 +215,7 @@ include("login.php");
 									</div>
 									<!--//col-->
 									<div class="col-auto">
-										<h4 class="app-card-title">Profile</h4>
+										<h4 class="app-card-title mt-3">Profile</h4>
 									</div>
 									<!--//col-->
 								</div>
