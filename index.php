@@ -13,9 +13,6 @@
   </head>
 
   <body class="app">
-  <?php
-    include("login.php");
-  ?>
     <header class="app-header fixed-top">
       <!--//Upper Nav panel-->
       <div class="app-header-inner">
@@ -23,7 +20,11 @@
           <div class="app-header-content">
             <div class="row justify-content-between align-items-center">
               <div class="app-utilities col-auto">
-                
+              <?php
+              include("login.php");
+
+
+               ?>
 
                 <!--//User-->
                 <div class="app-utility-item app-user-dropdown dropdown">
@@ -211,7 +212,7 @@
     <div class="app-wrapper">
       <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
-          <?php
+        <?php
           include("connection.php");
           echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
 								echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
@@ -224,15 +225,20 @@
 								$user_id=$row['SId'];
 								$user_name=$row['Name'];
 								$user_email=$row['Email'];
+                if($user!=null)
+                {
                 echo' <h1 class="app-page-title"><a3>Welcome back,</a3><a2>';
                 echo$user_name;
+                echo'!';
                 echo'</a2></h1>';
-          
-          
-          
-          
+                }
+                else
+                {
+                  echo' <h1 class="app-page-title"><a3>Please log in..</a3><a2>';
+                  echo'</a2></h1>';
+                }
           ?>
-          <!-- <h1 class="app-page-title"><a3>Welcome back,</a3> <a2>Jarif!</a2></h1> -->
+          
 
           <div class="row g-4 mb-4">
             <div class="col-12 col-lg-13">

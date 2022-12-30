@@ -10,5 +10,6 @@
   	session_destroy();
   	unset($_SESSION['SId']);
   	echo"<script> window.location.href ='login.html'</script>";
+    exit();
   }
 ?>
