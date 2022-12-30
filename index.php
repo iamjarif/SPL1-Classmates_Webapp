@@ -216,8 +216,8 @@
                 <div class="app-card-header p-6">
                   <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                      <a href="lectureNotesFrontend.php" class="app-card-title"
-                        >Recently Added Notes</a
+                      <a href="classRoutine.html" class="app-card-title"
+                        >Class Routine</a
                       >
                     </div>
                     <!--//col-->
@@ -227,110 +227,12 @@
                 <!--//app-card-header-->
 
                 <div class="app-card-body p-3 p-lg-6">
-                  <div class="tab-content" id="orders-table-tab-content">
-                    <div
-                      class="tab-pane fade show active"
-                      id="orders-all"
-                      role="tabpanel"
-                      aria-labelledby="orders-all-tab"
-                    >
-                      <div
-                        class="app-card app-card-orders-table shadow-sm mb-4"
-                      >
-                        <div class="app-card-body">
-                          <div class="table-responsive">
-                            <table class="table app-table-hover mb-0 text-left">
-                              <thead>
-                                <tr>
-                                  <th class="cell">Year</th>
-                                  <th class="cell">Course Name</th>
-                                  <th class="cell">Exam Name</th>
-                                 
-                                  <th class="cell">View</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                                <tr>
-                                <?php
-                                                 include("connection.php");
-                                                 $queslistquery="select * from questionbank order by quesuploadtime desc ";
-                                                 $quesdata=mysqli_query($conn,$queslistquery);
-                                                 $totalrows=mysqli_num_rows($quesdata);
-
-                                                
-                                                 if($totalrows>0 )
-                                                 {
-                                                   $quescount=0;
-                                                    while( $result=mysqli_fetch_assoc($quesdata))
-                                                    {
-                                                     $quescount++;
-                                                     if($quescount<4)
-                                                     {
-                                                      echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-                                                      echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-                                                      echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
-                                                      echo'<link rel="stylesheet" href="assets/css/styles.css">';
-                                                      echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
-                                                      echo"<tr>";
-
-
-                                                      echo"<td>";
-                                                      echo $result['year'];
-                                                      echo"</td>";
-
-                                                      echo"<td>";
-                                                      echo $result['cname'];
-                                                      echo"</td>";
-
-                                                      echo"<td>";
-                                                      echo $result['ExamName'];
-                                                      echo"</td>";
-
-                                                     
-
-                                              
-                                                    echo'<td class="cell">';
-                                                    echo'<a class="btn-sm app-btn-extra"';
-                                                    echo" href=";
-                                                    echo $result['qlink'];
-                                                    echo">";
-                                                    echo "Open</a>";
-                                                    echo'</td>';
-
-                                         
-
-
-                                                     echo"</tr>";
-
-                                                       
-                                                     }
-                                 
-
-                                                       
-                                                        
-                                                    }
-                                                 } 
-
-
-
-                                                ?>
-
-
-                                                         
-                                                        
-                                                  
-                              </tbody>
-                            </table>
-                          </div>
-                          <!--//table-responsive-->
-                        </div>
-                        <!--//app-card-body-->
-                      </div>
-                      <!--//app-card-->
-                    </div>
-                    <!--//tab-pane-->
-                  </div>
-                  <!--//tab-content-->
+                  <img
+                    class="image"
+                    src="assets/images/Class Routine/Routine.jpg"
+                    alt="HTML5 Icon"
+                    style="width: 580px; height: 410px"
+                  />
                 </div>
                 <!--//app-card-body-->
               </div>
@@ -343,8 +245,8 @@
                 <div class="app-card-header p-6">
                   <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                      <a href="questionBankfrontend.php" class="app-card-title"
-                        >Recently Added Questions</a
+                      <a href="booksfrontend.php" class="app-card-title"
+                        >Recently Added Books</a
                       >
                     </div>
                     <!--//col-->
@@ -369,83 +271,75 @@
                             <table class="table app-table-hover mb-0 text-left">
                               <thead>
                                 <tr>
-                                  <th class="cell">Year</th>
                                   <th class="cell">Course Name</th>
-                                  <th class="cell">Exam Name</th>
-                                 
+                                  <th class="cell">Book Name</th>
+                                  <th class="cell">Id</th>
                                   <th class="cell">View</th>
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
                                 <?php
+
                                                  include("connection.php");
-                                                 $queslistquery="select * from questionbank order by quesuploadtime desc ";
-                                                 $quesdata=mysqli_query($conn,$queslistquery);
-                                                 $totalrows=mysqli_num_rows($quesdata);
+                                                 $booklistquery="select * from books order by uploadtime desc";
+                                                 $bookdata=mysqli_query($conn,$booklistquery);
+                                                 $totalrows=mysqli_num_rows($bookdata);
+
+                                                $count=0;
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($bookdata))
+                                                    {
+                                                      $count++;
+                                                       if($count<4)
+                                                       {
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['bname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
 
                                                 
-                                                 if($totalrows>0 )
-                                                 {
-                                                   $quescount=0;
-                                                    while( $result=mysqli_fetch_assoc($quesdata))
-                                                    {
-                                                     $quescount++;
-                                                     if($quescount<4)
-                                                     {
-                                                      echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-                                                      echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-                                                      echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
-                                                      echo'<link rel="stylesheet" href="assets/css/styles.css">';
-                                                      echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
-                                                      echo"<tr>";
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['bookurl'];
+                                                      echo">";
+                                                      echo "Open</a>";
+                                                      echo'</td>';
+
+                                           
 
 
-                                                      echo"<td>";
-                                                      echo $result['year'];
-                                                      echo"</td>";
+                                                       echo"</tr>";
 
-                                                      echo"<td>";
-                                                      echo $result['cname'];
-                                                      echo"</td>";
+                                                       }
 
-                                                      echo"<td>";
-                                                      echo $result['ExamName'];
-                                                      echo"</td>";
-
-                                                     
-
-                                              
-                                                    echo'<td class="cell">';
-                                                    echo'<a class="btn-sm app-btn-extra"';
-                                                    echo" href=";
-                                                    echo $result['qlink'];
-                                                    echo">";
-                                                    echo "Open</a>";
-                                                    echo'</td>';
-
-                                         
-
-
-                                                     echo"</tr>";
-
-                                                       
-                                                     }
-                                 
-
-                                                       
+                                                        
+                                                         
                                                         
                                                     }
                                                  } 
 
 
 
-                                                ?>
+                                   ?> 
 
-
-                                                         
-                                                        
-                                                  
+                               
                               </tbody>
                             </table>
                           </div>
@@ -625,7 +519,6 @@
             <!--//col-->
           </div>
           <!--//row-->
-
         </div>
         <!--//container-fluid-->
       </div>
