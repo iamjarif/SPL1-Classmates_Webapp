@@ -2,6 +2,7 @@
 session_start();
 $uploadersid=$_SESSION['SId'];
 include("Connection.php");
+include("checklink.php");
 if(isset($_POST['bookupload']))
 {
   
@@ -13,6 +14,7 @@ if(isset($_POST['bookupload']))
   $uploadtime=date("y-m-d h:i:sa");
   $urlupload="INSERT INTO `books` (`cname`,`bname`,`sem`, `bookurl`, `SId`,`uploadtime`) VALUES ('$cname','$bname','$sem', '$bookurl', '$uploadersid','$uploadtime')";
   $questionuploadquery=mysqli_query($conn,$urlupload);
+   
   if($urlupload)
   {
     echo"<script>alert('Book uploaded  successfully!')</script>";
