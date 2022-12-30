@@ -26,10 +26,15 @@
           {
             
              echo'<embed ';
+             echo' ';
+             echo'width=1920px';
+             echo' ';
+             echo'height=1080px';
              echo' type="application/pdf"';
              echo'src="uploadnotice/';
              echo $result['filename'];
              echo'"';
+             
 
           }
        

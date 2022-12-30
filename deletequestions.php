@@ -11,7 +11,7 @@
    $delete_question=mysqli_query($conn,$question_delete_query);
    if($delete_question)
    {
-    echo"<script>alert('book deleted  successfully!!')</script>";
+    echo"<script>alert('The question is  deleted')</script>";
     echo"<script> window.location.href ='uploadques.html'</script>";
    }
 

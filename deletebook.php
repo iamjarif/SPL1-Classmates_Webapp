@@ -11,7 +11,7 @@
    $delete_book=mysqli_query($conn,$book_delete_query);
    if($delete_book)
    {
-    echo"<script>alert('book deleted  successfully!!')</script>";
+    echo"<script>alert('The book is deleted')</script>";
     echo"<script> window.location.href ='uploadBooks.html'</script>";
    }
 

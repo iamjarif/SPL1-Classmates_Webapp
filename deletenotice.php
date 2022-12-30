@@ -11,7 +11,7 @@
    $delete_notice=mysqli_query($conn,$notice_delete_query);
    if($delete_notice)
    {
-    echo"<script>alert('notice deleted  successfully!!')</script>";
+    echo"<script>alert('The notice is deleted')</script>";
     echo"<script> window.location.href ='postNotice.html'</script>";
    }
 

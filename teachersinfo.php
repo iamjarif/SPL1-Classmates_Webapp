@@ -15,12 +15,12 @@ if(isset($_POST['teachersInfoupload']))
   $questionuploadquery=mysqli_query($conn,$urlupload);
   if($urlupload)
   {
-    echo"<script>alert('teachersinfo uploaded  successfully!!')</script>";
+    echo"<script>alert('The teachersinfo is uploaded !')</script>";
     echo"<script> window.location.href ='addTeachersInfo.html'</script>";
   }
   else
    {
-     echo"<script>alert('uploading book was not successful')</script>";
+     echo"<script>alert('The data was not uploaded')</script>";
      echo"<script> window.location.href ='addTeachersInfo.html'</script>";
    }
   

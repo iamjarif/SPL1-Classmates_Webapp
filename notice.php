@@ -8,7 +8,7 @@ if(isset($_POST['noticeupload']))
   $Sid=$uploadersid;
   $ntitle=mysqli_real_escape_string($conn,$_POST['ntitle']);
   $ndescription=mysqli_real_escape_string($conn,$_POST['ndescription']);
-  $date=date('y-m-d');
+  $date=date('y-m-d h:i:sa');
   $noticefile=$_FILES['noticefile'];
 //    print_r($noticefile);
    $noticefilename=$_FILES['noticefile']['name'];
@@ -31,12 +31,12 @@ if(isset($_POST['noticeupload']))
          $questionuploadquery=mysqli_query($conn,$noticeupload);
          if($noticeupload)
          {
-           echo"<script>alert('notice uploaded  successfully!!')</script>";
+           echo"<script>alert('The notice is uploaded !!')</script>";
            echo"<script> window.location.href ='postNotice.html'</script>";
          }
          else
           {
-            echo"<script>alert('uploading notice was not successful')</script>";
+            echo"<script>alert('The notice was not uploaded')</script>";
             echo"<script> window.location.href ='postNotice.html'</script>";
           }
       

@@ -11,7 +11,7 @@
    $delete_book=mysqli_query($conn,$book_delete_query);
    if($delete_book)
    {
-    echo"<script>alert('lecture note deleted  successfully!!')</script>";
+    echo"<script>alert('The lecture note is deleted')</script>";
     echo"<script> window.location.href ='uploadNotes.html'</script>";
    }
 

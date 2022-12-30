@@ -6,7 +6,7 @@
     echo"<script> window.location.href ='login.html'</script>";
 
   }
-  if (isset($_GET['logout'])) {
+  if (isset($_POST['logout'])) {
   	session_destroy();
   	unset($_SESSION['SId']);
   	echo"<script> window.location.href ='login.html'</script>";

@@ -15,12 +15,12 @@ if(isset($_POST['questionbank']))
     $questionuploadquery=mysqli_query($conn,$urlupload);
     if($urlupload)
     {
-      echo"<script>alert('question uploaded  successfully!!')</script>";
+      echo"<script>alert('The question is uploaded !')</script>";
       echo"<script> window.location.href ='uploadques.html'</script>";
     }
     else
     {
-      echo"<script>alert('uploading quetions was not successful')</script>";
+      echo"<script>alert('The question was not uploaded')</script>";
       echo"<script> window.location.href ='uploadques.html'</script>";
     }
   

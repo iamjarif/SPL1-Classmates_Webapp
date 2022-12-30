@@ -17,13 +17,13 @@ if(isset($_POST['notesupload']))
     $notesquery=mysqli_query($conn,$urlupload);
     if($urlupload)
     {
-      echo"<script>alert('notes uploaded  successfully!!')</script>";
+      echo"<script>alert('The note is uploaded !')</script>";
       echo"<script> window.location.href ='uploadNotes.html'</script>";
     }
 
     else
     {
-      echo"<script>alert('uploading lectturenotes was not successful')</script>";
+      echo"<script>alert('The note was not uploaded.')</script>";
       echo"<script> window.location.href ='uploadNotes.html'</script>";
     }
   
