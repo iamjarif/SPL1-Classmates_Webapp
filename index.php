@@ -208,7 +208,7 @@
     <div class="app-wrapper">
       <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
-          <h1 class="app-page-title"><a3>Welcome back,</a3> <a2>Jarif!</a2></h1>
+          <h1 class="app-page-title"><a3>Welcome back,</a3> <a2>Students!</a2></h1>
 
           <div class="row g-4 mb-4">
             <div class="col-12 col-lg-13">
