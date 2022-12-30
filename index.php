@@ -20,11 +20,7 @@
           <div class="app-header-content">
             <div class="row justify-content-between align-items-center">
               <div class="app-utilities col-auto">
-              <?php
-              include("login.php");
-
-
-               ?>
+                
 
                 <!--//User-->
                 <div class="app-utility-item app-user-dropdown dropdown">
@@ -212,33 +208,7 @@
     <div class="app-wrapper">
       <div class="app-content pt-3 p-md-3 p-lg-4">
         <div class="container-xl">
-        <?php
-          include("connection.php");
-          echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
-								echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
-								echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
-								echo'<link rel="stylesheet" href="assets/css/styles.css">';
-								$user=$_SESSION['SId'];
-								$get_user="select * from students where SId='$user'";
-								$run_user=mysqli_query($conn,$get_user);
-								$row=mysqli_fetch_array($run_user);
-								$user_id=$row['SId'];
-								$user_name=$row['Name'];
-								$user_email=$row['Email'];
-                if($user!=null)
-                {
-                echo' <h1 class="app-page-title"><a3>Welcome back,</a3><a2>';
-                echo$user_name;
-                echo'!';
-                echo'</a2></h1>';
-                }
-                else
-                {
-                  echo' <h1 class="app-page-title"><a3>Please log in..</a3><a2>';
-                  echo'</a2></h1>';
-                }
-          ?>
-          
+          <h1 class="app-page-title"><a3>Welcome back,</a3> <a2>Students!</a2></h1>
 
           <div class="row g-4 mb-4">
             <div class="col-12 col-lg-13">
@@ -275,17 +245,17 @@
                             <li class="list-inline-item">Lomatul Mahzabin</li>
                           </ul>
                         </div>
-                        <!--//col-->
+                       
 
                         <div class="notification-content">
                           All the classes has been cancelled because of picnic!
                         </div>
                       </div>
-                      <!--//row-->
+                      
                     </div>
-                    <!--//app-card-header-->
+                   
                   </div>
-                  <!--//app-card-->
+                 
 
                   <div
                     class="app-cardNoticeShortcut app-card-notification shadow-sm mb-8"
