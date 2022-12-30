@@ -27,7 +27,18 @@ if(isset($_POST['noticeupload']))
      {
            
          move_uploaded_file($noticefileTmpname,$noticepath);
-         echo"<script>alert('uploaded')</script>";
+         $noticeupload="INSERT INTO `notice` (`ntitle`,`ndescription`, `time`, `SId`,`filename`) VALUES ('$ntitle','$ndescription', '$date', '$uploadersid','$noticefilename')";
+         $questionuploadquery=mysqli_query($conn,$noticeupload);
+         if($noticeupload)
+         {
+           echo"<script>alert('notice uploaded  successfully!!')</script>";
+           echo"<script> window.location.href ='postNotice.html'</script>";
+         }
+         else
+          {
+            echo"<script>alert('uploading notice was not successful')</script>";
+            echo"<script> window.location.href ='postNotice.html'</script>";
+          }
       
      }
       else
@@ -43,18 +54,9 @@ if(isset($_POST['noticeupload']))
       echo"<script>alert('uploading notice was not successful')</script>";
       echo"<script> window.location.href ='postNotice.html'</script>";
     }
-  $noticeupload="INSERT INTO `notice` (`ntitle`,`ndescription`, `time`, `SId`,`filename`) VALUES ('$ntitle','$ndescription', '$date', '$uploadersid','$noticefilename')";
-  $questionuploadquery=mysqli_query($conn,$noticeupload);
-  if($noticeupload)
-  {
-    echo"<script>alert('notice uploaded  successfully!!')</script>";
-    echo"<script> window.location.href ='postNotice.html'</script>";
-  }
-  else
-   {
-     echo"<script>alert('uploading notice was not successful')</script>";
-     echo"<script> window.location.href ='postNotice.html'</script>";
-   }
+
+
+ 
   
      }
   
