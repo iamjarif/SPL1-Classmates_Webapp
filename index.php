@@ -211,13 +211,13 @@
           <h1 class="app-page-title"><a3>Welcome back,</a3> <a2>Students!</a2></h1>
 
           <div class="row g-4 mb-4">
-            <div class="col-12 col-lg-13">
+          <div class="col-12 col-lg-13">
               <div class="app-card app-card-chart h-100 shadow-sm">
                 <div class="app-card-header p-6">
                   <div class="row justify-content-between align-items-center">
                     <div class="col-auto">
-                      <a href="noticeBoard.php" class="app-card-title"
-                        >Recent Notices</a
+                      <a href="lectureNotesFrontend.php" class="app-card-title"
+                        >Recently Added Notes</a
                       >
                     </div>
                     <!--//col-->
@@ -227,63 +227,102 @@
                 <!--//app-card-header-->
 
                 <div class="app-card-body p-3 p-lg-6">
-                  <div
-                    class="app-cardNoticeShortcut app-card-notification shadow-sm mb-8"
-                  >
-                    <div class="app-card-header px-4 py-3">
-                      <div class="row g-3 align-items-center">
-                        <div
-                          class="col-12 col-lg-auto text-center text-lg-start"
-                        >
-                          <h4 class="notification-title mb-1">
-                            Tomorrow no class! cheers!
-                          </h4>
+                  <div class="tab-content" id="orders-table-tab-content">
+                    <div
+                      class="tab-pane fade show active"
+                      id="orders-all"
+                      role="tabpanel"
+                      aria-labelledby="orders-all-tab"
+                    >
+                      <div
+                        class="app-card app-card-orders-table shadow-sm mb-4"
+                      >
+                        <div class="app-card-body">
+                          <div class="table-responsive">
+                            <table class="table app-table-hover mb-0 text-left">
+                              <thead>
+                                <tr>
+                                  <th class="cell">Course Name</th>
+                                  <th class="cell">Book Name</th>
+                                  <th class="cell">Id</th>
+                                  <th class="cell">View</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                <?php
 
-                          <ul class="notification-meta list-inline mb-0">
-                            <li class="list-inline-item">10 mins ago</li>
-                            <li class="list-inline-item">|</li>
-                            <li class="list-inline-item">Lomatul Mahzabin</li>
-                          </ul>
-                        </div>
-                       
+                                                 include("connection.php");
+                                                 $booklistquery="select * from books order by uploadtime desc";
+                                                 $bookdata=mysqli_query($conn,$booklistquery);
+                                                 $totalrows=mysqli_num_rows($bookdata);
 
-                        <div class="notification-content">
-                          All the classes has been cancelled because of picnic!
+                                                $count=0;
+                                                 if($totalrows>0)
+                                                 {
+                                                    while( $result=mysqli_fetch_assoc($bookdata))
+                                                    {
+                                                      $count++;
+                                                       if($count<4)
+                                                       {
+                                                        echo'<meta http-equiv="X-UA-Compatible" content="IE=edge">';
+                                                        echo'<meta name="viewport" content="width=device-width, initial-scale=1.0">';
+                                                        echo'<script defer src="assets/plugins/fontawesome/js/all.min.js"></script>';
+                                                        echo'<link rel="stylesheet" href="assets/css/styles.css">';
+                                                        echo'<link rel="icon" href="assets/images/app-logo.svg" type="image/x-icon">';
+                                                        echo"<tr>";
+
+                                                        echo"<td>";
+                                                        echo $result['cname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['bname'];
+                                                        echo"</td>";
+
+                                                        echo"<td>";
+                                                        echo $result['SId'];
+                                                        echo"</td>";
+
+                                                
+                                                      echo'<td class="cell">';
+                                                      echo'<a class="btn-sm app-btn-extra"';
+                                                      echo" href=";
+                                                      echo $result['bookurl'];
+                                                      echo">";
+                                                      echo "Open</a>";
+                                                      echo'</td>';
+
+                                           
+
+
+                                                       echo"</tr>";
+
+                                                       }
+
+                                                        
+                                                         
+                                                        
+                                                    }
+                                                 } 
+
+
+
+                                   ?> 
+
+                               
+                              </tbody>
+                            </table>
+                          </div>
+                          <!--//table-responsive-->
                         </div>
+                        <!--//app-card-body-->
                       </div>
-                      
+                      <!--//app-card-->
                     </div>
-                   
+                    <!--//tab-pane-->
                   </div>
-                 
-
-                  <div
-                    class="app-cardNoticeShortcut app-card-notification shadow-sm mb-8"
-                  >
-                    <div class="app-card-header px-4 py-3">
-                      <div class="row g-3 align-items-center">
-                        <div
-                          class="col-12 col-lg-auto text-center text-lg-start"
-                        >
-                          <h4 class="notification-title mb-1">
-                            Class cancelled
-                          </h4>
-
-                          <ul class="notification-meta list-inline mb-0">
-                            <li class="list-inline-item">2 days ago</li>
-                            <li class="list-inline-item">|</li>
-                            <li class="list-inline-item">Lomatul Mahzabin</li>
-                          </ul>
-                        </div>
-                        <!--//col-->
-
-                        <div class="notification-content">Pardyyyyy!</div>
-                      </div>
-                      <!--//row-->
-                    </div>
-                    <!--//app-card-header-->
-                  </div>
-                  <!--//app-card-->
+                  <!--//tab-content-->
                 </div>
                 <!--//app-card-body-->
               </div>
