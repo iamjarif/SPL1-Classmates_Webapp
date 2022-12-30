@@ -243,7 +243,7 @@
                               <thead>
                                 <tr>
                                   <th class="cell">Course Name</th>
-                                  <th class="cell">Book Name</th>
+                                  <th class="cell">Semester</th>
                                   <th class="cell">Id</th>
                                   <th class="cell">View</th>
                                 </tr>
@@ -253,14 +253,14 @@
                                 <?php
 
                                                  include("connection.php");
-                                                 $booklistquery="select * from books order by uploadtime desc";
-                                                 $bookdata=mysqli_query($conn,$booklistquery);
-                                                 $totalrows=mysqli_num_rows($bookdata);
+                                                 $noteslistquery="select * from lecture_notes order by lecuploadtime desc";
+                                                 $notesdata=mysqli_query($conn,$noteslistquery);
+                                                 $totalrows=mysqli_num_rows($notesdata);
 
                                                 $count=0;
                                                  if($totalrows>0)
                                                  {
-                                                    while( $result=mysqli_fetch_assoc($bookdata))
+                                                    while( $result=mysqli_fetch_assoc($notesdata))
                                                     {
                                                       $count++;
                                                        if($count<4)
@@ -277,7 +277,7 @@
                                                         echo"</td>";
 
                                                         echo"<td>";
-                                                        echo $result['bname'];
+                                                        echo $result['sem'];
                                                         echo"</td>";
 
                                                         echo"<td>";
@@ -288,7 +288,7 @@
                                                       echo'<td class="cell">';
                                                       echo'<a class="btn-sm app-btn-extra"';
                                                       echo" href=";
-                                                      echo $result['bookurl'];
+                                                      echo $result['leclink'];
                                                       echo">";
                                                       echo "Open</a>";
                                                       echo'</td>';
